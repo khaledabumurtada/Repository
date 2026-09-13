@@ -1,0 +1,8 @@
+[style.css](https://github.com/user-attachments/files/32170915/style.css)
+[about.html](https://github.com/user-attachments/files/32170916/about.html)[script.js](https://github.com/user-attachments/files/32170925/script.js)
+[README.md](https://github.com/user-attachments/files/32170924/README.md)
+[privacy.html](https://github.com/user-attachments/files/32170923/privacy.html)
+[index.html](https://github.com/user-attachments/files/32170921/index.html)
+[data.js](https://github.com/user-attachments/files/32170920/data.js)
+[contact.html](https://github.com/user-attachments/files/32170918/contact.html)
+[admin.html](https://github.com/user-attachments/files/32170917/admin.html)
