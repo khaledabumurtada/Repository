@@ -38,7 +38,15 @@
   .app-form textarea { min-height: 50px; resize: vertical; }
   .app-form .actions { grid-column: 1 / -1; display: flex; gap: 10px; }
 
-  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius); }
+  table { width: 100%; min-width: 560px; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+
+  @media (max-width: 640px) {
+    .app-form { grid-template-columns: 1fr; }
+    .admin-wrap { padding: 24px 14px 80px; }
+    .toolbar { flex-direction: column; }
+    .toolbar .btn { width: 100%; text-align: center; }
+  }
   th, td { padding: 10px 12px; text-align: right; border-bottom: 1px solid var(--line); font-size: 13.5px; vertical-align: top; }
   th { background: var(--paper); font-size: 12px; color: var(--ink-soft); }
   tr:last-child td { border-bottom: none; }
@@ -105,12 +113,14 @@
     </div>
   </form>
 
-  <table>
-    <thead>
-      <tr><th>الأيقونة</th><th>الاسم</th><th>التصنيف</th><th>الرابط</th><th></th></tr>
-    </thead>
-    <tbody id="apps-table-body"></tbody>
-  </table>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>الأيقونة</th><th>الاسم</th><th>التصنيف</th><th>الرابط</th><th></th></tr>
+      </thead>
+      <tbody id="apps-table-body"></tbody>
+    </table>
+  </div>
 </div>
 
 <script src="data.js"></script>
