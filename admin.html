@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم — دليلي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { direction: rtl; }
+  .admin-wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 100px; }
+  .admin-wrap h1 { font-size: 26px; margin-bottom: 4px; }
+  .admin-note { color: var(--ink-soft); font-size: 14px; margin-bottom: 30px; }
+
+  .gate { max-width: 360px; margin: 90px auto; text-align: center; }
+  .gate input { width: 100%; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; margin: 14px 0; }
+  .gate button, .btn {
+    background: var(--ink); color: var(--paper); border: none; padding: 10px 18px;
+    border-radius: 8px; cursor: pointer; font-size: 14px;
+  }
+  .btn.secondary { background: var(--teal); }
+  .btn.danger { background: var(--danger); }
+  .btn.small { padding: 6px 12px; font-size: 13px; }
+
+  .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+
+  .app-form {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px;
+  }
+  .app-form .full { grid-column: 1 / -1; }
+  .app-form label { display: block; font-size: 12.5px; color: var(--ink-soft); margin-bottom: 4px; }
+  .app-form input, .app-form select, .app-form textarea {
+    width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; font-family: inherit; font-size: 14px;
+  }
+  .app-form textarea { min-height: 50px; resize: vertical; }
+  .app-form .actions { grid-column: 1 / -1; display: flex; gap: 10px; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  th, td { padding: 10px 12px; text-align: right; border-bottom: 1px solid var(--line); font-size: 13.5px; vertical-align: top; }
+  th { background: var(--paper); font-size: 12px; color: var(--ink-soft); }
+  tr:last-child td { border-bottom: none; }
+  .row-actions { display: flex; gap: 6px; }
+
+  .status { padding: 10px 14px; border-radius: 8px; margin-bottom: 18px; font-size: 14px; display: none; }
+  .status.show { display: block; }
+  .status.ok { background: #e6f2e9; color: #2b6b3d; }
+</style>
+</head>
+<body>
+
+<div id="gate" class="gate">
+  <h1>لوحة التحكم</h1>
+  <p class="admin-note">هاي اللوحة محلية بالمتصفح فقط — أدخل كلمة المرور اللي حددتها بملف admin.html (بحث عن ADMIN_PASSWORD) للمتابعة.</p>
+  <input type="password" id="pw-input" placeholder="كلمة المرور">
+  <br>
+  <button onclick="tryLogin()">دخول</button>
+</div>
+
+<div id="panel" class="admin-wrap" style="display:none">
+  <h1>لوحة تحكم التطبيقات</h1>
+  <p class="admin-note">
+    التعديلات هون تُحفظ مؤقتًا بهذا المتصفح فقط. عشان تظهر التعديلات لكل زوار الموقع،
+    اضغط "تنزيل data.js المحدّث" وارفع الملف الجديد مكان القديم على الاستضافة/GitHub.
+  </p>
+
+  <div id="status" class="status ok"></div>
+
+  <div class="toolbar">
+    <button class="btn" onclick="downloadDataJs()">⬇ تنزيل data.js المحدّث</button>
+    <button class="btn secondary" onclick="resetToOriginal()">إرجاع كل شي لآخر نسخة من data.js</button>
+  </div>
+
+  <form class="app-form" id="app-form" onsubmit="return submitForm(event)">
+    <input type="hidden" id="edit-id">
+    <div>
+      <label>التصنيف</label>
+      <select id="f-category"></select>
+    </div>
+    <div>
+      <label>الرابط (URL)</label>
+      <input type="url" id="f-url" placeholder="https://example.com" required>
+    </div>
+    <div>
+      <label>الاسم بالعربي</label>
+      <input type="text" id="f-name-ar" required>
+    </div>
+    <div>
+      <label>الاسم بالإنجليزي</label>
+      <input type="text" id="f-name-en" required>
+    </div>
+    <div class="full">
+      <label>الوصف بالعربي</label>
+      <textarea id="f-desc-ar" required></textarea>
+    </div>
+    <div class="full">
+      <label>الوصف بالإنجليزي</label>
+      <textarea id="f-desc-en" required></textarea>
+    </div>
+    <div class="actions">
+      <button type="submit" class="btn">إضافة / حفظ التعديل</button>
+      <button type="button" class="btn secondary" onclick="clearForm()">تفريغ الفورم</button>
+    </div>
+  </form>
+
+  <table>
+    <thead>
+      <tr><th>الأيقونة</th><th>الاسم</th><th>التصنيف</th><th>الرابط</th><th></th></tr>
+    </thead>
+    <tbody id="apps-table-body"></tbody>
+  </table>
+</div>
+
+<script src="data.js"></script>
+<script>
+/* غيّر كلمة المرور هون قبل رفع الموقع */
+const ADMIN_PASSWORD = "MDwYoY6tgM1S";
+
+const STORAGE_KEY = "admin_apps_override_v1";
+const CAT_STORAGE_KEY = "admin_cats_override_v1";
+
+function loadApps() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  return raw ? JSON.parse(raw) : JSON.parse(JSON.stringify(APPS));
+}
+function loadCats() {
+  const raw = localStorage.getItem(CAT_STORAGE_KEY);
+  return raw ? JSON.parse(raw) : JSON.parse(JSON.stringify(CATEGORIES));
+}
+function saveApps(apps) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(apps));
+}
+
+let apps = loadApps();
+const cats = loadCats();
+
+function tryLogin() {
+  const val = document.getElementById("pw-input").value;
+  if (val === ADMIN_PASSWORD) {
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("panel").style.display = "block";
+    initPanel();
+  } else {
+    alert("كلمة مرور خاطئة");
+  }
+}
+
+function initPanel() {
+  const sel = document.getElementById("f-category");
+  sel.innerHTML = cats.map(c => `<option value="${c.slug}">${c.name_ar} / ${c.name_en}</option>`).join("");
+  renderTable();
+}
+
+function renderTable() {
+  const body = document.getElementById("apps-table-body");
+  body.innerHTML = apps.map(a => {
+    const cat = cats.find(c => c.slug === a.category);
+    return `
+      <tr>
+        <td><img src="https://www.google.com/s2/favicons?domain=${a.domain}&sz=32" width="24" height="24" alt=""></td>
+        <td>${a.name_ar}<br><small style="color:#888">${a.name_en}</small></td>
+        <td>${cat ? cat.name_ar : a.category}</td>
+        <td><a href="${a.url}" target="_blank" rel="noopener">${a.domain}</a></td>
+        <td class="row-actions">
+          <button class="btn small secondary" onclick="editApp('${a.id}')">تعديل</button>
+          <button class="btn small danger" onclick="deleteApp('${a.id}')">حذف</button>
+        </td>
+      </tr>`;
+  }).join("");
+}
+
+function clearForm() {
+  document.getElementById("edit-id").value = "";
+  document.getElementById("f-url").value = "";
+  document.getElementById("f-name-ar").value = "";
+  document.getElementById("f-name-en").value = "";
+  document.getElementById("f-desc-ar").value = "";
+  document.getElementById("f-desc-en").value = "";
+}
+
+function editApp(id) {
+  const a = apps.find(x => x.id === id);
+  if (!a) return;
+  document.getElementById("edit-id").value = a.id;
+  document.getElementById("f-category").value = a.category;
+  document.getElementById("f-url").value = a.url;
+  document.getElementById("f-name-ar").value = a.name_ar;
+  document.getElementById("f-name-en").value = a.name_en;
+  document.getElementById("f-desc-ar").value = a.desc_ar;
+  document.getElementById("f-desc-en").value = a.desc_en;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function deleteApp(id) {
+  if (!confirm("متأكد بدك تحذف هاد التطبيق؟")) return;
+  apps = apps.filter(a => a.id !== id);
+  saveApps(apps);
+  renderTable();
+  showStatus("تم الحذف. لا تنسَ تنزّل data.js المحدّث وترفعه.");
+}
+
+function submitForm(e) {
+  e.preventDefault();
+  const id = document.getElementById("edit-id").value;
+  const url = document.getElementById("f-url").value.trim();
+  let domain = "";
+  try { domain = new URL(url).hostname; } catch (err) { domain = url; }
+
+  const record = {
+    id: id || ("custom-" + Date.now()),
+    category: document.getElementById("f-category").value,
+    url,
+    domain,
+    name_ar: document.getElementById("f-name-ar").value.trim(),
+    name_en: document.getElementById("f-name-en").value.trim(),
+    desc_ar: document.getElementById("f-desc-ar").value.trim(),
+    desc_en: document.getElementById("f-desc-en").value.trim(),
+  };
+
+  if (id) {
+    apps = apps.map(a => a.id === id ? record : a);
+  } else {
+    apps.push(record);
+  }
+  saveApps(apps);
+  renderTable();
+  clearForm();
+  showStatus("تم الحفظ محليًا. لا تنسَ تنزّل data.js المحدّث وترفعه عشان يشوفه كل الزوار.");
+  return false;
+}
+
+function resetToOriginal() {
+  if (!confirm("رح ترجع لآخر نسخة محفوظة بملف data.js وتلغي أي تعديل محلي؟")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  apps = loadApps();
+  renderTable();
+  showStatus("تم الإرجاع لنسخة data.js الأصلية.");
+}
+
+function downloadDataJs() {
+  let out = "// بيانات التطبيقات والتصنيفات - تم تصديرها من لوحة التحكم\n";
+  out += "const CATEGORIES = " + JSON.stringify(cats, null, 2) + ";\n\n";
+  out += "const APPS = " + JSON.stringify(apps, null, 2) + ";\n";
+  const blob = new Blob([out], { type: "text/javascript;charset=utf-8" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "data.js";
+  link.click();
+}
+
+function showStatus(msg) {
+  const el = document.getElementById("status");
+  el.textContent = msg;
+  el.classList.add("show");
+  setTimeout(() => el.classList.remove("show"), 4000);
+}
+
+document.getElementById("pw-input").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") tryLogin();
+});
+</script>
+</body>
+</html>
