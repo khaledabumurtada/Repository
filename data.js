@@ -1150,5 +1150,25 @@ const APPS = [
     "name_en": "Looka",
     "desc_ar": "أداة لتصميم شعارات وهوية بصرية بالذكاء الاصطناعي.",
     "desc_en": "AI tool for designing logos and brand identity."
+  },
+  {
+    "id": "ai-new-metaai",
+    "category": "ai",
+    "url": "https://www.meta.ai/",
+    "domain": "www.meta.ai",
+    "name_ar": "ميتا AI",
+    "name_en": "Meta AI",
+    "desc_ar": "مساعد ذكاء اصطناعي من ميتا للمحادثة وتوليد الصور والإجابة على الأسئلة.",
+    "desc_en": "Meta's AI assistant for chat, image generation and answering questions."
+  },
+  {
+    "id": "audio-new-mureka",
+    "category": "audio",
+    "url": "https://www.mureka.ai/create",
+    "domain": "www.mureka.ai",
+    "name_ar": "Mureka AI",
+    "name_en": "Mureka AI",
+    "desc_ar": "منصة لتوليد أغاني وموسيقى كاملة بالذكاء الاصطناعي من كلمات أو وصف نصي.",
+    "desc_en": "AI platform for generating full songs and music from lyrics or a text prompt."
   }
 ];
