@@ -1170,5 +1170,15 @@ const APPS = [
     "name_en": "Mureka AI",
     "desc_ar": "منصة لتوليد أغاني وموسيقى كاملة بالذكاء الاصطناعي من كلمات أو وصف نصي.",
     "desc_en": "AI platform for generating full songs and music from lyrics or a text prompt."
+  },
+  {
+    "id": "ai-new-pixella",
+    "category": "ai",
+    "url": "https://pixella.ai/text-to-video-ai",
+    "domain": "pixella.ai",
+    "name_ar": "Pixella AI",
+    "name_en": "Pixella AI",
+    "desc_ar": "أداة لتحويل النص إلى فيديو بالذكاء الاصطناعي.",
+    "desc_en": "AI tool for turning text into video."
   }
 ];
