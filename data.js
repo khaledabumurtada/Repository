@@ -1190,5 +1190,15 @@ const APPS = [
     "name_en": "Free AI",
     "desc_ar": "منصة تجمع أدوات ذكاء اصطناعي مجانية للاستخدام المباشر.",
     "desc_en": "Platform offering free AI tools for direct use."
+  },
+  {
+    "id": "marketing-new-autods",
+    "category": "marketing",
+    "url": "https://platform.autods.com/choose-plan",
+    "domain": "platform.autods.com",
+    "name_ar": "AutoDS",
+    "name_en": "AutoDS",
+    "desc_ar": "منصة أتمتة الدروبشيبنج لإدارة المنتجات والطلبات والأسعار تلقائيًا عبر عدة متاجر.",
+    "desc_en": "Dropshipping automation platform for managing products, orders and pricing across stores."
   }
 ];
