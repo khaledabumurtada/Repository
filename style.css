@@ -159,6 +159,27 @@ html[lang="ar"] .hero h1 { font-family: var(--font-ar); }
   font-size: 16px;
 }
 
+/* ============ Intro / SEO copy ============ */
+.intro {
+  max-width: 800px;
+  padding: 4px 0 8px;
+}
+.intro h2 {
+  font-size: 17px;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.intro p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.85;
+}
+@media (max-width: 600px) {
+  .intro h2 { font-size: 15.5px; }
+  .intro p { font-size: 13.5px; }
+}
+
 /* ============ Main grid: sidebar + content ============ */
 .layout {
   display: grid;
