@@ -3,6 +3,8 @@ const STRINGS = {
   ar: {
     title: "دليلي",
     tagline: "دليل عربي/إنجليزي لأفضل تطبيقات وأدوات الذكاء الاصطناعي والإنتاجية — مُصنّفة وجاهزة لتجربتها مباشرة.",
+    introTitle: "دليل شامل ومحدَّث لأدوات الذكاء الاصطناعي",
+    introBody: "\"دليلي\" مكتبة عربية/إنجليزية مجانية تجمع أفضل تطبيقات وأدوات الذكاء الاصطناعي والإنتاجية والتسويق في مكان واحد، مصنّفة حسب نوع الاستخدام حتى تلاقي الأداة المناسبة بسرعة بدل ما تضيع وقتك بالبحث بين عشرات الروابط المتفرقة. سواء كنت تدوّر على أداة لتوليد الفيديو والصور، مساعد ذكاء اصطناعي للكتابة والمحادثة، أداة لبناء تطبيق بدون كود، أو حلول لتحويل النص إلى صوت — بتلاقيها هون مع شرح مختصر وواضح لكل أداة ورابط مباشر لتجربتها. نحدّث القائمة بشكل مستمر بإضافة أدوات جديدة وإزالة أي رابط ما عاد شغّال، عشان الدليل يضل مصدر موثوق ومفيد لأي حد بيدوّر يواكب عالم الذكاء الاصطناعي المتسارع.",
     searchPlaceholder: "ابحث عن أداة أو تطبيق...",
     allCategories: "كل التطبيقات",
     categoriesLabel: "التصنيفات",
@@ -19,6 +21,8 @@ const STRINGS = {
   en: {
     title: "Daleeli",
     tagline: "A bilingual directory of AI and productivity apps, organized by category and ready to try.",
+    introTitle: "A comprehensive, regularly updated AI tools directory",
+    introBody: "Daleeli is a free bilingual (Arabic/English) library that brings together the best AI, productivity and marketing apps in one place, organized by use case so you can find the right tool quickly instead of digging through scattered links. Whether you're looking for video or image generation, an AI writing and chat assistant, a no-code app builder, or text-to-speech tools, you'll find it here with a short, clear description and a direct link to try it. We continuously update the list by adding new tools and removing dead links, so the directory stays a reliable, useful resource for anyone keeping up with the fast-moving world of AI.",
     searchPlaceholder: "Search for a tool or app...",
     allCategories: "All Apps",
     categoriesLabel: "Categories",
