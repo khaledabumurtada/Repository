@@ -1180,5 +1180,15 @@ const APPS = [
     "name_en": "Pixella AI",
     "desc_ar": "أداة لتحويل النص إلى فيديو بالذكاء الاصطناعي.",
     "desc_en": "AI tool for turning text into video."
+  },
+  {
+    "id": "ai-new-freeai",
+    "category": "ai",
+    "url": "https://free.ai/",
+    "domain": "free.ai",
+    "name_ar": "Free AI",
+    "name_en": "Free AI",
+    "desc_ar": "منصة تجمع أدوات ذكاء اصطناعي مجانية للاستخدام المباشر.",
+    "desc_en": "Platform offering free AI tools for direct use."
   }
 ];
