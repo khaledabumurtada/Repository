@@ -13,6 +13,8 @@ const STRINGS = {
     openApp: "افتح التطبيق",
     emptyTitle: "ما لقينا نتائج",
     emptyDesc: "جرّب كلمة بحث ثانية أو اختر تصنيف مختلف.",
+    searchResultsTitle: "نتائج البحث",
+    homeTilesTitle: "التصنيفات",
     footerAbout: "من نحن",
     footerPrivacy: "سياسة الخصوصية",
     footerContact: "تواصل معنا",
@@ -31,6 +33,8 @@ const STRINGS = {
     openApp: "Open App",
     emptyTitle: "No results found",
     emptyDesc: "Try a different search term or category.",
+    searchResultsTitle: "Search Results",
+    homeTilesTitle: "Categories",
     footerAbout: "About",
     footerPrivacy: "Privacy Policy",
     footerContact: "Contact",
@@ -61,6 +65,7 @@ function applyLang(lang) {
   });
   renderCategories();
   renderApps();
+  if (typeof renderMobile === "function") renderMobile();
 }
 
 /* ============ Rendering ============ */
@@ -194,6 +199,130 @@ function renderApps() {
   } catch (e) { /* AdSense script not loaded in this environment yet */ }
 }
 
+/* ============ Mobile "iPhone-style" home screen ============ */
+let mobileScreen = "home"; // "home" | "category" | "search"
+let mobileCat = null;
+
+function renderMobileHomeTiles() {
+  const grid = document.getElementById("mobile-cat-tiles");
+  if (!grid || typeof APPS === "undefined") return;
+  const s = STRINGS[currentLang];
+  grid.innerHTML = "";
+
+  const allTile = document.createElement("button");
+  allTile.className = "mobile-tile is-category";
+  allTile.innerHTML = `
+    <span class="mobile-tile-icon">🗂️</span>
+    <span class="mobile-tile-label">${s.allCategories}</span>
+    <span class="mobile-tile-count">${getCategoryCount("all")}</span>
+  `;
+  allTile.addEventListener("click", () => {
+    mobileCat = "all";
+    renderMobileAppTiles(APPS);
+    setMobileScreen("category", s.allCategories);
+  });
+  grid.appendChild(allTile);
+
+  CATEGORIES.forEach(cat => {
+    const count = getCategoryCount(cat.slug);
+    if (count === 0) return;
+    const name = currentLang === "ar" ? cat.name_ar : cat.name_en;
+    const tile = document.createElement("button");
+    tile.className = "mobile-tile is-category";
+    tile.innerHTML = `
+      <span class="mobile-tile-icon">${cat.icon}</span>
+      <span class="mobile-tile-label">${name}</span>
+      <span class="mobile-tile-count">${count}</span>
+    `;
+    tile.addEventListener("click", () => openMobileCategory(cat.slug, name));
+    grid.appendChild(tile);
+  });
+}
+
+function renderMobileAppTiles(list) {
+  const grid = document.getElementById("mobile-app-tiles");
+  if (!grid) return;
+  const s = STRINGS[currentLang];
+  grid.innerHTML = "";
+
+  if (list.length === 0) {
+    grid.innerHTML = `<div class="mobile-empty">${s.emptyTitle}<br><small>${s.emptyDesc}</small></div>`;
+    return;
+  }
+
+  list.forEach(app => {
+    const name = currentLang === "ar" ? app.name_ar : app.name_en;
+    const tile = document.createElement("a");
+    tile.className = "mobile-tile";
+    tile.href = app.url;
+    tile.target = "_blank";
+    tile.rel = "noopener noreferrer nofollow";
+    tile.innerHTML = `
+      <span class="mobile-tile-icon"><img src="${faviconUrl(app.domain)}" alt="" loading="lazy" onerror="this.style.display='none'"></span>
+      <span class="mobile-tile-label">${name}</span>
+    `;
+    grid.appendChild(tile);
+  });
+}
+
+function setMobileScreen(screen, title) {
+  mobileScreen = screen;
+  const topbar = document.getElementById("mobile-topbar");
+  const titleEl = document.getElementById("mobile-screen-title");
+  const catGrid = document.getElementById("mobile-cat-tiles");
+  const appGrid = document.getElementById("mobile-app-tiles");
+
+  if (screen === "home") {
+    topbar.classList.remove("show");
+    catGrid.classList.add("show");
+    appGrid.classList.remove("show");
+  } else {
+    topbar.classList.add("show");
+    titleEl.textContent = title || "";
+    catGrid.classList.remove("show");
+    appGrid.classList.add("show");
+  }
+}
+
+function openMobileCategory(slug, name) {
+  mobileCat = slug;
+  const list = APPS.filter(a => a.category === slug);
+  renderMobileAppTiles(list);
+  setMobileScreen("category", name);
+}
+
+function openMobileSearch(query) {
+  const s = STRINGS[currentLang];
+  const list = filteredApps();
+  renderMobileAppTiles(list);
+  setMobileScreen("search", s.searchResultsTitle);
+}
+
+function goMobileHome() {
+  mobileCat = null;
+  const searchInput = document.getElementById("search-input");
+  if (searchInput) searchInput.value = "";
+  currentQuery = "";
+  renderApps();
+  setMobileScreen("home");
+}
+
+function renderMobile() {
+  renderMobileHomeTiles();
+  const s = STRINGS[currentLang];
+  if (currentQuery.trim()) {
+    openMobileSearch(currentQuery);
+  } else if (mobileScreen === "category" && mobileCat === "all") {
+    renderMobileAppTiles(APPS);
+    setMobileScreen("category", s.allCategories);
+  } else if (mobileScreen === "category" && mobileCat) {
+    const cat = CATEGORIES.find(c => c.slug === mobileCat);
+    openMobileCategory(mobileCat, cat ? (currentLang === "ar" ? cat.name_ar : cat.name_en) : "");
+  } else {
+    setMobileScreen("home");
+  }
+}
+
 /* ============ Init ============ */
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".lang-toggle button").forEach(btn => {
@@ -205,8 +334,16 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.addEventListener("input", (e) => {
       currentQuery = e.target.value;
       renderApps();
+      if (currentQuery.trim()) {
+        openMobileSearch(currentQuery);
+      } else if (mobileScreen !== "category") {
+        setMobileScreen("home");
+      }
     });
   }
+
+  const backBtn = document.getElementById("mobile-back-btn");
+  if (backBtn) backBtn.addEventListener("click", goMobileHome);
 
   applyLang(currentLang);
 });
