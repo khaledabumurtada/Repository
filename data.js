@@ -1200,5 +1200,25 @@ const APPS = [
     "name_en": "AutoDS",
     "desc_ar": "منصة أتمتة الدروبشيبنج لإدارة المنتجات والطلبات والأسعار تلقائيًا عبر عدة متاجر.",
     "desc_en": "Dropshipping automation platform for managing products, orders and pricing across stores."
+  },
+  {
+    "id": "ai-new-imagineart",
+    "category": "ai",
+    "url": "https://www.imagine.art/",
+    "domain": "www.imagine.art",
+    "name_ar": "Imagine Art",
+    "name_en": "Imagine Art",
+    "desc_ar": "منصة لتوليد وتحرير الصور والفن الرقمي بالذكاء الاصطناعي.",
+    "desc_en": "AI platform for generating and editing images and digital art."
+  },
+  {
+    "id": "ai-new-midjourney",
+    "category": "ai",
+    "url": "https://www.midjourney.com/explore",
+    "domain": "www.midjourney.com",
+    "name_ar": "Midjourney",
+    "name_en": "Midjourney",
+    "desc_ar": "من أشهر أدوات توليد الصور الفنية بالذكاء الاصطناعي بجودة عالية.",
+    "desc_en": "One of the most popular AI tools for generating high-quality artistic images."
   }
 ];
