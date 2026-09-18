@@ -11,6 +11,8 @@ const STRINGS = {
     resultsFor: "النتائج في",
     resultsCount: (n) => `${n} أداة`,
     openApp: "افتح التطبيق",
+    copyPrompt: "نسخ البرومبت",
+    copied: "تم النسخ ✓",
     emptyTitle: "ما لقينا نتائج",
     emptyDesc: "جرّب كلمة بحث ثانية أو اختر تصنيف مختلف.",
     searchResultsTitle: "نتائج البحث",
@@ -31,6 +33,8 @@ const STRINGS = {
     resultsFor: "Results in",
     resultsCount: (n) => `${n} apps`,
     openApp: "Open App",
+    copyPrompt: "Copy Prompt",
+    copied: "Copied ✓",
     emptyTitle: "No results found",
     emptyDesc: "Try a different search term or category.",
     searchResultsTitle: "Search Results",
@@ -71,6 +75,37 @@ function applyLang(lang) {
 /* ============ Rendering ============ */
 function faviconUrl(domain) {
   return `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
+}
+
+function copyToClipboard(text, triggerEl, s) {
+  const done = () => {
+    if (!triggerEl) return;
+    const original = triggerEl.textContent;
+    triggerEl.textContent = s.copied;
+    triggerEl.classList.add("copied");
+    setTimeout(() => {
+      triggerEl.textContent = original;
+      triggerEl.classList.remove("copied");
+    }, 1500);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+
+function fallbackCopy(text, cb) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.position = "fixed";
+  ta.style.opacity = "0";
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try { document.execCommand("copy"); } catch (e) { /* ignore */ }
+  document.body.removeChild(ta);
+  if (cb) cb();
 }
 
 function getCategoryCount(slug) {
@@ -161,17 +196,35 @@ function renderApps() {
     const desc = currentLang === "ar" ? app.desc_ar : app.desc_en;
     const card = document.createElement("article");
     card.className = "app-card";
-    card.innerHTML = `
-      <div class="app-card-top">
-        <div class="app-icon"><img src="${faviconUrl(app.domain)}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
-        <div>
-          <div class="app-title">${name}</div>
-          <div class="app-domain">${app.domain}</div>
+
+    if (app.type === "prompt") {
+      const promptText = currentLang === "ar" ? app.prompt_ar : app.prompt_en;
+      card.innerHTML = `
+        <div class="app-card-top">
+          <div class="app-icon app-icon--prompt">💬</div>
+          <div>
+            <div class="app-title">${name}</div>
+          </div>
         </div>
-      </div>
-      <p class="app-desc">${desc}</p>
-      <a class="app-open" href="${app.url}" target="_blank" rel="noopener noreferrer nofollow">${s.openApp}</a>
-    `;
+        <p class="app-desc">${desc}</p>
+        <div class="prompt-box">${promptText}</div>
+        <button type="button" class="app-open app-open--copy">${s.copyPrompt}</button>
+      `;
+      const btn = card.querySelector(".app-open--copy");
+      btn.addEventListener("click", () => copyToClipboard(promptText, btn, s));
+    } else {
+      card.innerHTML = `
+        <div class="app-card-top">
+          <div class="app-icon"><img src="${faviconUrl(app.domain)}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+          <div>
+            <div class="app-title">${name}</div>
+            <div class="app-domain">${app.domain}</div>
+          </div>
+        </div>
+        <p class="app-desc">${desc}</p>
+        <a class="app-open" href="${app.url}" target="_blank" rel="noopener noreferrer nofollow">${s.openApp}</a>
+      `;
+    }
     grid.appendChild(card);
 
     // In-feed ad slot every 8 cards (placeholder)
@@ -252,17 +305,47 @@ function renderMobileAppTiles(list) {
 
   list.forEach(app => {
     const name = currentLang === "ar" ? app.name_ar : app.name_en;
-    const tile = document.createElement("a");
-    tile.className = "mobile-tile";
-    tile.href = app.url;
-    tile.target = "_blank";
-    tile.rel = "noopener noreferrer nofollow";
-    tile.innerHTML = `
-      <span class="mobile-tile-icon"><img src="${faviconUrl(app.domain)}" alt="" loading="lazy" onerror="this.style.display='none'"></span>
-      <span class="mobile-tile-label">${name}</span>
-    `;
+    let tile;
+    if (app.type === "prompt") {
+      tile = document.createElement("button");
+      tile.className = "mobile-tile";
+      tile.type = "button";
+      tile.innerHTML = `
+        <span class="mobile-tile-icon mobile-tile-icon--prompt">💬</span>
+        <span class="mobile-tile-label">${name}</span>
+      `;
+      const promptText = currentLang === "ar" ? app.prompt_ar : app.prompt_en;
+      tile.addEventListener("click", () => {
+        copyToClipboard(promptText, null, s);
+        showMobileToast(s.copied);
+      });
+    } else {
+      tile = document.createElement("a");
+      tile.className = "mobile-tile";
+      tile.href = app.url;
+      tile.target = "_blank";
+      tile.rel = "noopener noreferrer nofollow";
+      tile.innerHTML = `
+        <span class="mobile-tile-icon"><img src="${faviconUrl(app.domain)}" alt="" loading="lazy" onerror="this.style.display='none'"></span>
+        <span class="mobile-tile-label">${name}</span>
+      `;
+    }
     grid.appendChild(tile);
   });
+}
+
+function showMobileToast(msg) {
+  let toast = document.getElementById("mobile-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "mobile-toast";
+    toast.className = "mobile-toast";
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add("show");
+  clearTimeout(showMobileToast._t);
+  showMobileToast._t = setTimeout(() => toast.classList.remove("show"), 1500);
 }
 
 function setMobileScreen(screen, title) {
