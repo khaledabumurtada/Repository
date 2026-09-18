@@ -1220,5 +1220,185 @@ const APPS = [
     "name_en": "Midjourney",
     "desc_ar": "من أشهر أدوات توليد الصور الفنية بالذكاء الاصطناعي بجودة عالية.",
     "desc_en": "One of the most popular AI tools for generating high-quality artistic images."
+  },
+  {
+    "id": "ai-new-chatgpt",
+    "category": "ai",
+    "url": "https://chatgpt.com/",
+    "domain": "chatgpt.com",
+    "name_ar": "ChatGPT",
+    "name_en": "ChatGPT",
+    "desc_ar": "مساعد الذكاء الاصطناعي الأشهر عالميًا للمحادثة والكتابة والإجابة على الأسئلة وتحليل المحتوى.",
+    "desc_en": "The world's most popular AI assistant for chat, writing, Q&A and content analysis."
+  },
+  {
+    "id": "ai-new-tome",
+    "category": "ai",
+    "url": "https://tome.app/",
+    "domain": "tome.app",
+    "name_ar": "Tome",
+    "name_en": "Tome",
+    "desc_ar": "أداة لإنشاء عروض تقديمية احترافية بسرعة باستخدام الذكاء الاصطناعي.",
+    "desc_en": "AI tool for quickly creating professional presentations."
+  },
+  {
+    "id": "ai-new-tabnine",
+    "category": "ai",
+    "url": "https://www.tabnine.com/",
+    "domain": "www.tabnine.com",
+    "name_ar": "Tabnine",
+    "name_en": "Tabnine",
+    "desc_ar": "مساعد برمجي بالذكاء الاصطناعي يكتب أكواد ويقترح حلولًا داخل بيئة التطوير.",
+    "desc_en": "AI coding assistant that writes code and suggests solutions in your IDE."
+  },
+  {
+    "id": "ai-new-characterai",
+    "category": "ai",
+    "url": "https://character.ai/",
+    "domain": "character.ai",
+    "name_ar": "Character.AI",
+    "name_en": "Character.AI",
+    "desc_ar": "منصة لإنشاء شخصيات ذكاء اصطناعي والدردشة معها بمحادثات واقعية.",
+    "desc_en": "Platform for creating AI characters and chatting with them realistically."
+  },
+  {
+    "id": "ai-new-copyai",
+    "category": "ai",
+    "url": "https://www.copy.ai/",
+    "domain": "www.copy.ai",
+    "name_ar": "Copy.ai",
+    "name_en": "Copy.ai",
+    "desc_ar": "أداة كتابة محتوى تسويقي وإعلاني بالذكاء الاصطناعي بأكثر من 25 لغة.",
+    "desc_en": "AI copywriting tool for marketing content in 25+ languages."
+  },
+  {
+    "id": "ai-new-tryellie",
+    "category": "ai",
+    "url": "https://tryellie.com/",
+    "domain": "tryellie.com",
+    "name_ar": "Tryellie",
+    "name_en": "Tryellie",
+    "desc_ar": "يردّ على الإيميلات نيابة عنك بأسلوب كتابتك واحترافية.",
+    "desc_en": "Replies to your emails in your own writing style, professionally."
+  },
+  {
+    "id": "automation-new-godmode",
+    "category": "automation",
+    "url": "https://godmode.space/",
+    "domain": "godmode.space",
+    "name_ar": "GodMode",
+    "name_en": "GodMode",
+    "desc_ar": "منصة تشغّل وكلاء ذكاء اصطناعي مستقلين (مثل Auto-GPT) لتنفيذ مهام معقدة تلقائيًا.",
+    "desc_en": "Platform for running autonomous AI agents (like Auto-GPT) to execute complex tasks."
+  },
+  {
+    "id": "ai-new-fireflies",
+    "category": "ai",
+    "url": "https://fireflies.ai/",
+    "domain": "fireflies.ai",
+    "name_ar": "Fireflies",
+    "name_en": "Fireflies",
+    "desc_ar": "يسجّل الاجتماعات ويحوّلها لنصوص وملخصات تلقائيًا.",
+    "desc_en": "Records meetings and turns them into transcripts and summaries automatically."
+  },
+  {
+    "id": "ai-new-stockimgai",
+    "category": "ai",
+    "url": "https://stockimg.ai/",
+    "domain": "stockimg.ai",
+    "name_ar": "Stockimg AI",
+    "name_en": "Stockimg AI",
+    "desc_ar": "توليد صور عالية الجودة وخالية من حقوق الملكية بالذكاء الاصطناعي.",
+    "desc_en": "Generates high-quality, royalty-free images using AI."
+  },
+  {
+    "id": "ai-new-tripnotes",
+    "category": "ai",
+    "url": "https://tripnotes.ai/",
+    "domain": "tripnotes.ai",
+    "name_ar": "Tripnotes",
+    "name_en": "Tripnotes",
+    "desc_ar": "يخطط لرحلتك ويجمع معلومات سفر في كل موقع بالذكاء الاصطناعي.",
+    "desc_en": "AI travel planner that gathers info about every stop on your trip."
+  },
+  {
+    "id": "ai-new-myaifrontdesk",
+    "category": "ai",
+    "url": "https://www.myaifrontdesk.com/",
+    "domain": "www.myaifrontdesk.com",
+    "name_ar": "My AI Front Desk",
+    "name_en": "My AI Front Desk",
+    "desc_ar": "موظف استقبال ذكي يرد على مكالمات الشركة ويخدم العملاء 24/7.",
+    "desc_en": "AI receptionist that answers business calls and serves customers 24/7."
+  },
+  {
+    "id": "domains-new-namy",
+    "category": "domains",
+    "url": "https://namy.ai/",
+    "domain": "namy.ai",
+    "name_ar": "Namy",
+    "name_en": "Namy",
+    "desc_ar": "يقترح أسماء وأدوماينات مميزة لمشروعك ويتحقق من توفرها فورًا.",
+    "desc_en": "Suggests catchy business names and domains, checking availability instantly."
+  },
+  {
+    "id": "ai-new-undetectableai",
+    "category": "ai",
+    "url": "https://undetectable.ai/",
+    "domain": "undetectable.ai",
+    "name_ar": "Undetectable AI",
+    "name_en": "Undetectable AI",
+    "desc_ar": "يعيد صياغة النصوص لتبدو مكتوبة بشرية بنسبة 100% وتتجاوز كاشفات الذكاء الاصطناعي.",
+    "desc_en": "Rewrites AI text to read as 100% human and bypass AI detectors."
+  },
+  {
+    "id": "ai-new-askyourpdf",
+    "category": "ai",
+    "url": "https://askyourpdf.com/",
+    "domain": "askyourpdf.com",
+    "name_ar": "AskYourPDF",
+    "name_en": "AskYourPDF",
+    "desc_ar": "تلخيص وطرح أسئلة والاستخراج من ملفات PDF مباشرة بالذكاء الاصطناعي.",
+    "desc_en": "Summarize, question, and extract info from PDF files directly with AI."
+  },
+  {
+    "id": "ai-new-quillbot",
+    "category": "ai",
+    "url": "https://quillbot.com/",
+    "domain": "quillbot.com",
+    "name_ar": "QuillBot",
+    "name_en": "QuillBot",
+    "desc_ar": "أداة لإعادة صياغة النصوص وتدقيقها وترجمتها بالذكاء الاصطناعي.",
+    "desc_en": "AI tool for paraphrasing, proofreading and translating text."
+  },
+  {
+    "id": "design-new-lensa",
+    "category": "design",
+    "url": "https://prisma-ai.com/lensa",
+    "domain": "prisma-ai.com",
+    "name_ar": "Lensa",
+    "name_en": "Lensa",
+    "desc_ar": "تحرير الصور وإنشاء صور رمزية فنية مميزة وتأثيرات احترافية بالذكاء الاصطناعي.",
+    "desc_en": "AI photo editor for professional retouching and unique artistic avatars."
+  },
+  {
+    "id": "ai-new-replika",
+    "category": "ai",
+    "url": "https://replika.com/",
+    "domain": "replika.com",
+    "name_ar": "Replika",
+    "name_en": "Replika",
+    "desc_ar": "رفيق افتراضي ذكي يتفاعل معك بمحادثات يومية ويتذكر تفاصيلك.",
+    "desc_en": "A smart AI companion that chats with you daily and remembers your details."
+  },
+  {
+    "id": "design-new-microsoftdesigner",
+    "category": "design",
+    "url": "https://designer.microsoft.com/",
+    "domain": "designer.microsoft.com",
+    "name_ar": "Microsoft Designer",
+    "name_en": "Microsoft Designer",
+    "desc_ar": "أداة من مايكروسوفت لإنشاء تصاميم احترافية (بوسترات، منشورات، دعوات) بالذكاء الاصطناعي.",
+    "desc_en": "Microsoft's AI tool for creating professional designs (posters, posts, invitations)."
   }
 ];
