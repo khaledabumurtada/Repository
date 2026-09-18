@@ -1400,5 +1400,375 @@ const APPS = [
     "name_en": "Microsoft Designer",
     "desc_ar": "أداة من مايكروسوفت لإنشاء تصاميم احترافية (بوسترات، منشورات، دعوات) بالذكاء الاصطناعي.",
     "desc_en": "Microsoft's AI tool for creating professional designs (posters, posts, invitations)."
+  },
+  {
+    "id": "ai-new2-microsoftcopilot",
+    "category": "ai",
+    "url": "https://copilot.microsoft.com/",
+    "domain": "copilot.microsoft.com",
+    "name_ar": "Microsoft Copilot",
+    "name_en": "Microsoft Copilot",
+    "desc_ar": "مساعد ذكاء اصطناعي من مايكروسوفت للمحادثة والبحث والمساعدة بالكتابة.",
+    "desc_en": "Microsoft's AI assistant for chat, search and writing help."
+  },
+  {
+    "id": "ai-new2-leonardoai",
+    "category": "ai",
+    "url": "https://leonardo.ai/",
+    "domain": "leonardo.ai",
+    "name_ar": "Leonardo AI",
+    "name_en": "Leonardo AI",
+    "desc_ar": "توليد صور احترافية بدقة عالية وخيارات تخصيص متعددة.",
+    "desc_en": "Generate high-quality professional images with many customization options."
+  },
+  {
+    "id": "ai-new2-pika",
+    "category": "ai",
+    "url": "https://pika.art/",
+    "domain": "pika.art",
+    "name_ar": "Pika",
+    "name_en": "Pika",
+    "desc_ar": "إنشاء وتعديل فيديو بالذكاء الاصطناعي بسهولة وسرعة.",
+    "desc_en": "Create and edit video with AI, easily and quickly."
+  },
+  {
+    "id": "audio-new2-playht",
+    "category": "audio",
+    "url": "https://play.ht/",
+    "domain": "play.ht",
+    "name_ar": "PlayHT",
+    "name_en": "PlayHT",
+    "desc_ar": "تحويل النص إلى صوت طبيعي بأصوات واقعية متعددة اللغات.",
+    "desc_en": "Natural text-to-speech with realistic multilingual voices."
+  },
+  {
+    "id": "ai-new2-marketmuse",
+    "category": "ai",
+    "url": "https://www.marketmuse.com/",
+    "domain": "www.marketmuse.com",
+    "name_ar": "MarketMuse",
+    "name_en": "MarketMuse",
+    "desc_ar": "تخطيط وتحسين محتوى SEO بالذكاء الاصطناعي.",
+    "desc_en": "AI-powered content planning and SEO optimization."
+  },
+  {
+    "id": "ai-new2-clearscope",
+    "category": "ai",
+    "url": "https://www.clearscope.io/",
+    "domain": "www.clearscope.io",
+    "name_ar": "Clearscope",
+    "name_en": "Clearscope",
+    "desc_ar": "تحسين محتوى المقالات ليتصدّر نتائج البحث بالذكاء الاصطناعي.",
+    "desc_en": "AI tool for optimizing content to rank higher in search results."
+  },
+  {
+    "id": "ai-new2-chatfuel",
+    "category": "ai",
+    "url": "https://www.chatfuel.com/",
+    "domain": "www.chatfuel.com",
+    "name_ar": "Chatfuel",
+    "name_en": "Chatfuel",
+    "desc_ar": "بناء روبوتات محادثة للمبيعات وخدمة العملاء بدون كود.",
+    "desc_en": "Build no-code chatbots for sales and customer service."
+  },
+  {
+    "id": "ai-new2-droxy",
+    "category": "ai",
+    "url": "https://droxy.ai/",
+    "domain": "droxy.ai",
+    "name_ar": "Droxy",
+    "name_en": "Droxy",
+    "desc_ar": "بناء روبوت محادثة ذكي مدرّب على بيانات عملك.",
+    "desc_en": "Build an AI chatbot trained on your own business data."
+  },
+  {
+    "id": "ai-new2-chatsimple",
+    "category": "ai",
+    "url": "https://www.chatsimple.ai/",
+    "domain": "www.chatsimple.ai",
+    "name_ar": "ChatSimple",
+    "name_en": "ChatSimple",
+    "desc_ar": "روبوت محادثة ذكي يجيب على عملاء موقعك تلقائيًا.",
+    "desc_en": "AI chatbot that automatically answers your website visitors."
+  },
+  {
+    "id": "ai-new2-chatbase",
+    "category": "ai",
+    "url": "https://www.chatbase.co/",
+    "domain": "www.chatbase.co",
+    "name_ar": "Chatbase",
+    "name_en": "Chatbase",
+    "desc_ar": "بناء روبوت دردشة مخصص من بيانات موقعك أو مستنداتك.",
+    "desc_en": "Build a custom chatbot trained on your website or documents."
+  },
+  {
+    "id": "google-new2-dialogflow",
+    "category": "google",
+    "url": "https://dialogflow.cloud.google.com/",
+    "domain": "dialogflow.cloud.google.com",
+    "name_ar": "Dialogflow",
+    "name_en": "Dialogflow",
+    "desc_ar": "منصة جوجل لبناء روبوتات محادثة صوتية ونصية.",
+    "desc_en": "Google's platform for building voice and text conversational bots."
+  },
+  {
+    "id": "design-new2-logoai",
+    "category": "design",
+    "url": "https://www.logoai.com/",
+    "domain": "www.logoai.com",
+    "name_ar": "Logo AI",
+    "name_en": "Logo AI",
+    "desc_ar": "تصميم شعار احترافي لعلامتك التجارية خلال دقائق بالذكاء الاصطناعي.",
+    "desc_en": "Design a professional brand logo in minutes with AI."
+  },
+  {
+    "id": "design-new2-brandmark",
+    "category": "design",
+    "url": "https://brandmark.io/",
+    "domain": "brandmark.io",
+    "name_ar": "Brandmark",
+    "name_en": "Brandmark",
+    "desc_ar": "توليد شعار وهوية بصرية متكاملة بالذكاء الاصطناعي.",
+    "desc_en": "AI-generated logo and complete brand identity."
+  },
+  {
+    "id": "automation-new2-zapier",
+    "category": "automation",
+    "url": "https://zapier.com/",
+    "domain": "zapier.com",
+    "name_ar": "Zapier",
+    "name_en": "Zapier",
+    "desc_ar": "ربط تطبيقاتك ببعضها وأتمتة المهام المتكررة تلقائيًا.",
+    "desc_en": "Connect your apps and automate repetitive tasks."
+  },
+  {
+    "id": "ai-new2-seaartai",
+    "category": "ai",
+    "url": "https://www.seaart.ai/",
+    "domain": "www.seaart.ai",
+    "name_ar": "SeaArt AI",
+    "name_en": "SeaArt AI",
+    "desc_ar": "توليد صور فنية وشخصيات أنمي بالذكاء الاصطناعي.",
+    "desc_en": "AI-generated artwork and anime-style character images."
+  },
+  {
+    "id": "ai-new2-gencraft",
+    "category": "ai",
+    "url": "https://gencraft.com/",
+    "domain": "gencraft.com",
+    "name_ar": "Gencraft",
+    "name_en": "Gencraft",
+    "desc_ar": "توليد صور وفن رقمي من نص بالذكاء الاصطناعي.",
+    "desc_en": "AI text-to-image and digital art generator."
+  },
+  {
+    "id": "ai-new2-clarifai",
+    "category": "ai",
+    "url": "https://www.clarifai.com/",
+    "domain": "www.clarifai.com",
+    "name_ar": "Clarifai",
+    "name_en": "Clarifai",
+    "desc_ar": "منصة رؤية حاسوبية للتعرف على الصور والفيديو بالذكاء الاصطناعي.",
+    "desc_en": "AI computer vision platform for image and video recognition."
+  },
+  {
+    "id": "ai-new2-writesonic",
+    "category": "ai",
+    "url": "https://writesonic.com/",
+    "domain": "writesonic.com",
+    "name_ar": "Writesonic",
+    "name_en": "Writesonic",
+    "desc_ar": "كتابة مقالات ومحتوى تسويقي متوافق مع SEO بالذكاء الاصطناعي.",
+    "desc_en": "AI tool for writing SEO-friendly articles and marketing copy."
+  },
+  {
+    "id": "ai-new2-wordtune",
+    "category": "ai",
+    "url": "https://www.wordtune.com/",
+    "domain": "www.wordtune.com",
+    "name_ar": "Wordtune",
+    "name_en": "Wordtune",
+    "desc_ar": "إعادة صياغة الجمل وتحسين أسلوب الكتابة بالذكاء الاصطناعي.",
+    "desc_en": "AI tool for rephrasing sentences and improving writing style."
+  },
+  {
+    "id": "ai-new2-rytr",
+    "category": "ai",
+    "url": "https://rytr.me/",
+    "domain": "rytr.me",
+    "name_ar": "Rytr",
+    "name_en": "Rytr",
+    "desc_ar": "كتابة محتوى قصير وسريع بالذكاء الاصطناعي بعدة لغات.",
+    "desc_en": "Fast AI short-form content writing in multiple languages."
+  },
+  {
+    "id": "ai-new2-surferseo",
+    "category": "ai",
+    "url": "https://surferseo.com/",
+    "domain": "surferseo.com",
+    "name_ar": "Surfer SEO",
+    "name_en": "Surfer SEO",
+    "desc_ar": "تحليل وتحسين المقالات لتتصدّر نتائج جوجل.",
+    "desc_en": "Analyze and optimize articles to rank higher on Google."
+  },
+  {
+    "id": "ai-new2-vidiq",
+    "category": "ai",
+    "url": "https://vidiq.com/",
+    "domain": "vidiq.com",
+    "name_ar": "vidIQ",
+    "name_en": "vidIQ",
+    "desc_ar": "أداة تحليل وتحسين فيديوهات يوتيوب لزيادة المشاهدات.",
+    "desc_en": "YouTube video analytics and optimization tool for more views."
+  },
+  {
+    "id": "ai-new2-alliai",
+    "category": "ai",
+    "url": "https://alli.ai/",
+    "domain": "alli.ai",
+    "name_ar": "Alli AI",
+    "name_en": "Alli AI",
+    "desc_ar": "أتمتة تحسين محركات البحث (SEO) لموقعك بالذكاء الاصطناعي.",
+    "desc_en": "AI tool that automates on-page SEO for your website."
+  },
+  {
+    "id": "marketing-new2-serpstat",
+    "category": "marketing",
+    "url": "https://serpstat.com/",
+    "domain": "serpstat.com",
+    "name_ar": "Serpstat",
+    "name_en": "Serpstat",
+    "desc_ar": "أداة تحليل الكلمات المفتاحية والمنافسين وتحسين SEO.",
+    "desc_en": "Keyword research, competitor analysis and SEO tool."
+  },
+  {
+    "id": "ai-new2-wordlift",
+    "category": "ai",
+    "url": "https://wordlift.io/",
+    "domain": "wordlift.io",
+    "name_ar": "WordLift",
+    "name_en": "WordLift",
+    "desc_ar": "أداة SEO بالذكاء الاصطناعي لتنظيم المحتوى وزيادة الظهور بالبحث.",
+    "desc_en": "AI-powered SEO tool that structures content for better search visibility."
+  },
+  {
+    "id": "marketing-new2-simplified",
+    "category": "marketing",
+    "url": "https://simplified.com/",
+    "domain": "simplified.com",
+    "name_ar": "Simplified",
+    "name_en": "Simplified",
+    "desc_ar": "منصة شاملة للتصميم والكتابة والتسويق بالذكاء الاصطناعي بمكان واحد.",
+    "desc_en": "All-in-one AI design, writing and marketing platform."
+  },
+  {
+    "id": "marketing-new2-mailchimp",
+    "category": "marketing",
+    "url": "https://mailchimp.com/",
+    "domain": "mailchimp.com",
+    "name_ar": "Mailchimp",
+    "name_en": "Mailchimp",
+    "desc_ar": "منصة تسويق عبر البريد الإلكتروني وأتمتة الحملات.",
+    "desc_en": "Email marketing platform with campaign automation."
+  },
+  {
+    "id": "marketing-new2-adcreativeai",
+    "category": "marketing",
+    "url": "https://www.adcreative.ai/",
+    "domain": "www.adcreative.ai",
+    "name_ar": "AdCreative AI",
+    "name_en": "AdCreative AI",
+    "desc_ar": "توليد تصاميم وإعلانات تسويقية عالية التحويل بالذكاء الاصطناعي.",
+    "desc_en": "AI-generated ad creatives designed for high conversion."
+  },
+  {
+    "id": "ai-new2-beautifulai",
+    "category": "ai",
+    "url": "https://www.beautiful.ai/",
+    "domain": "www.beautiful.ai",
+    "name_ar": "Beautiful.ai",
+    "name_en": "Beautiful.ai",
+    "desc_ar": "إنشاء عروض تقديمية أنيقة تلقائيًا بالذكاء الاصطناعي.",
+    "desc_en": "Automatically creates elegant, well-designed presentations."
+  },
+  {
+    "id": "ai-new2-decktopus",
+    "category": "ai",
+    "url": "https://www.decktopus.com/",
+    "domain": "www.decktopus.com",
+    "name_ar": "Decktopus",
+    "name_en": "Decktopus",
+    "desc_ar": "أداة لإنشاء عروض تقديمية احترافية بسرعة بالذكاء الاصطناعي.",
+    "desc_en": "AI tool for quickly creating professional presentations."
+  },
+  {
+    "id": "ai-new2-gamma",
+    "category": "ai",
+    "url": "https://gamma.app/",
+    "domain": "gamma.app",
+    "name_ar": "Gamma",
+    "name_en": "Gamma",
+    "desc_ar": "إنشاء عروض تقديمية ومستندات وصفحات ويب من نص بالذكاء الاصطناعي.",
+    "desc_en": "Create presentations, docs and web pages from text using AI."
+  },
+  {
+    "id": "design-new2-designsai",
+    "category": "design",
+    "url": "https://designs.ai/",
+    "domain": "designs.ai",
+    "name_ar": "Designs.ai",
+    "name_en": "Designs.ai",
+    "desc_ar": "مجموعة أدوات تصميم شاملة (شعارات، فيديو، صور) بالذكاء الاصطناعي.",
+    "desc_en": "All-in-one AI design suite for logos, video and images."
+  },
+  {
+    "id": "ai-new2-lumen5",
+    "category": "ai",
+    "url": "https://lumen5.com/",
+    "domain": "lumen5.com",
+    "name_ar": "Lumen5",
+    "name_en": "Lumen5",
+    "desc_ar": "تحويل المقالات النصية إلى فيديوهات جاهزة للنشر بالذكاء الاصطناعي.",
+    "desc_en": "Turns text articles into ready-to-publish videos using AI."
+  },
+  {
+    "id": "audio-new2-auphonic",
+    "category": "audio",
+    "url": "https://auphonic.com/",
+    "domain": "auphonic.com",
+    "name_ar": "Auphonic",
+    "name_en": "Auphonic",
+    "desc_ar": "تحسين جودة الصوت وضبطه تلقائيًا للبودكاست والفيديو.",
+    "desc_en": "Automatically enhances and levels audio for podcasts and video."
+  },
+  {
+    "id": "audio-new2-lovoai",
+    "category": "audio",
+    "url": "https://lovo.ai/",
+    "domain": "lovo.ai",
+    "name_ar": "LOVO AI",
+    "name_en": "LOVO AI",
+    "desc_ar": "تحويل النص إلى صوت احترافي بأصوات ذكاء اصطناعي طبيعية.",
+    "desc_en": "Professional AI text-to-speech with natural-sounding voices."
+  },
+  {
+    "id": "app-building-new2-natively",
+    "category": "app-building",
+    "url": "https://www.natively.dev/",
+    "domain": "www.natively.dev",
+    "name_ar": "Natively",
+    "name_en": "Natively",
+    "desc_ar": "بناء تطبيقات جوال حقيقية بكود كامل بمساعدة الذكاء الاصطناعي.",
+    "desc_en": "Build real mobile apps with full native code using AI."
+  },
+  {
+    "id": "ai-new2-playablai",
+    "category": "ai",
+    "url": "https://www.playabl.ai/",
+    "domain": "www.playabl.ai",
+    "name_ar": "Playabl.ai",
+    "name_en": "Playabl.ai",
+    "desc_ar": "بناء ألعاب وتجارب تفاعلية عن طريق المحادثة مع الذكاء الاصطناعي.",
+    "desc_en": "Build games and interactive experiences by chatting with AI."
   }
 ];
