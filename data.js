@@ -2420,5 +2420,15 @@ const APPS = [
     "desc_en": "Give the answer in one line.",
     "prompt_ar": "أعطني الإجابة بسطر واحد فقط",
     "prompt_en": "Give me the answer in a single line"
+  },
+  {
+    "id": "ai-new-capafy",
+    "category": "ai",
+    "url": "https://capafy.ai/ar/",
+    "domain": "capafy.ai",
+    "name_ar": "Capafy",
+    "name_en": "Capafy",
+    "desc_ar": "سوق لوكلاء ذكاء اصطناعي جاهزين لتنفيذ مهام محددة (مثل كتابة إيميل أو فرز سيرة ذاتية) بدون امتلاك المهارة بنفسك.",
+    "desc_en": "A marketplace of ready AI agents that perform specific tasks (like writing an email or screening a resume) on demand."
   }
 ];
