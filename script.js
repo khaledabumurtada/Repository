@@ -222,7 +222,7 @@ function renderApps() {
           </div>
         </div>
         <p class="app-desc">${desc}</p>
-        <a class="app-open" href="${app.url}" target="_blank" rel="noopener noreferrer nofollow">${s.openApp}</a>
+        <a class="app-open" href="app.html?id=${encodeURIComponent(app.id)}">${s.openApp}</a>
       `;
     }
     grid.appendChild(card);
@@ -322,9 +322,7 @@ function renderMobileAppTiles(list) {
     } else {
       tile = document.createElement("a");
       tile.className = "mobile-tile";
-      tile.href = app.url;
-      tile.target = "_blank";
-      tile.rel = "noopener noreferrer nofollow";
+      tile.href = `app.html?id=${encodeURIComponent(app.id)}`;
       tile.innerHTML = `
         <span class="mobile-tile-icon"><img src="${faviconUrl(app.domain)}" alt="" loading="lazy" onerror="this.style.display='none'"></span>
         <span class="mobile-tile-label">${name}</span>
