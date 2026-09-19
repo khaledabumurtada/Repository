@@ -2430,5 +2430,65 @@ const APPS = [
     "name_en": "Capafy",
     "desc_ar": "سوق لوكلاء ذكاء اصطناعي جاهزين لتنفيذ مهام محددة (مثل كتابة إيميل أو فرز سيرة ذاتية) بدون امتلاك المهارة بنفسك.",
     "desc_en": "A marketplace of ready AI agents that perform specific tasks (like writing an email or screening a resume) on demand."
+  },
+  {
+    "id": "ai-new3-comfyuicomfy",
+    "category": "ai",
+    "url": "https://www.comfy.org/",
+    "domain": "www.comfy.org",
+    "name_ar": "ComfyUI (Comfy)",
+    "name_en": "ComfyUI (Comfy)",
+    "desc_ar": "أداة مفتوحة المصدر لبناء مسارات توليد صور وفيديو بالذكاء الاصطناعي بطريقة بصرية (Stable Diffusion وغيره).",
+    "desc_en": "Open-source visual workflow builder for AI image/video generation (Stable Diffusion and more)."
+  },
+  {
+    "id": "ai-new3-anijam",
+    "category": "ai",
+    "url": "https://www.anijam.ai/",
+    "domain": "www.anijam.ai",
+    "name_ar": "Anijam",
+    "name_en": "Anijam",
+    "desc_ar": "منصة لتحويل وصف نصي بسيط إلى فيديو رسوم متحركة كامل تلقائيًا بالذكاء الاصطناعي.",
+    "desc_en": "AI platform that turns a simple text description into a full animated video automatically."
+  },
+  {
+    "id": "audio-new3-fishaudio",
+    "category": "audio",
+    "url": "https://fish.audio/",
+    "domain": "fish.audio",
+    "name_ar": "Fish Audio",
+    "name_en": "Fish Audio",
+    "desc_ar": "استنساخ الأصوات وتحويل النص إلى كلام واقعي بالذكاء الاصطناعي.",
+    "desc_en": "AI voice cloning and realistic text-to-speech."
+  },
+  {
+    "id": "ai-new3-vheer",
+    "category": "ai",
+    "url": "https://vheer.com/",
+    "domain": "vheer.com",
+    "name_ar": "Vheer",
+    "name_en": "Vheer",
+    "desc_ar": "مجموعة أدوات مجانية بالذكاء الاصطناعي لتوليد الصور والفيديو وتحرير المستندات بدون تسجيل دخول.",
+    "desc_en": "Free AI toolbox for generating images/video and editing documents, no login required."
+  },
+  {
+    "id": "design-new3-animos",
+    "category": "design",
+    "url": "https://animos.app/",
+    "domain": "animos.app",
+    "name_ar": "Animos",
+    "name_en": "Animos",
+    "desc_ar": "قوالب جاهزة لعرض تصاميمك بحركة احترافية خلال أقل من دقيقة.",
+    "desc_en": "Ready motion templates to showcase your designs professionally in under a minute."
+  },
+  {
+    "id": "ai-new3-arenalmarena",
+    "category": "ai",
+    "url": "https://arena.ai/",
+    "domain": "arena.ai",
+    "name_ar": "Arena (LMArena)",
+    "name_en": "Arena (LMArena)",
+    "desc_ar": "منصة لمقارنة نماذج الذكاء الاصطناعي المختلفة جنبًا إلى جنب والتصويت على الأفضل.",
+    "desc_en": "Platform for comparing different AI models side-by-side and voting on the best."
   }
 ];
