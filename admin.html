@@ -107,6 +107,14 @@
       <label>الوصف بالإنجليزي</label>
       <textarea id="f-desc-en" required></textarea>
     </div>
+    <div class="full">
+      <label>المقال الكامل بالعربي (اختياري — يظهر بصفحة الأداة الخاصة بها لتحسين SEO وAdSense. افصل بين الفقرات بسطر فاضي)</label>
+      <textarea id="f-article-ar" style="min-height:160px"></textarea>
+    </div>
+    <div class="full">
+      <label>Full Article in English (optional — shown on the tool's own page. Leave a blank line between paragraphs)</label>
+      <textarea id="f-article-en" style="min-height:160px"></textarea>
+    </div>
     <div class="actions">
       <button type="submit" class="btn">إضافة / حفظ التعديل</button>
       <button type="button" class="btn secondary" onclick="clearForm()">تفريغ الفورم</button>
@@ -116,7 +124,7 @@
   <div class="table-wrap">
     <table>
       <thead>
-        <tr><th>الأيقونة</th><th>الاسم</th><th>التصنيف</th><th>الرابط</th><th></th></tr>
+        <tr><th>الأيقونة</th><th>الاسم</th><th>التصنيف</th><th>الرابط</th><th>المقال</th><th></th></tr>
       </thead>
       <tbody id="apps-table-body"></tbody>
     </table>
@@ -173,6 +181,7 @@ function renderTable() {
         <td>${a.name_ar}<br><small style="color:#888">${a.name_en}</small></td>
         <td>${cat ? cat.name_ar : a.category}</td>
         <td><a href="${a.url}" target="_blank" rel="noopener">${a.domain}</a></td>
+        <td>${a.article_ar ? '<span style="color:#2b6b3d">✓ فيه مقال</span>' : '<span style="color:#999">— بدون مقال</span>'}</td>
         <td class="row-actions">
           <button class="btn small secondary" onclick="editApp('${a.id}')">تعديل</button>
           <button class="btn small danger" onclick="deleteApp('${a.id}')">حذف</button>
@@ -188,6 +197,8 @@ function clearForm() {
   document.getElementById("f-name-en").value = "";
   document.getElementById("f-desc-ar").value = "";
   document.getElementById("f-desc-en").value = "";
+  document.getElementById("f-article-ar").value = "";
+  document.getElementById("f-article-en").value = "";
 }
 
 function editApp(id) {
@@ -200,6 +211,8 @@ function editApp(id) {
   document.getElementById("f-name-en").value = a.name_en;
   document.getElementById("f-desc-ar").value = a.desc_ar;
   document.getElementById("f-desc-en").value = a.desc_en;
+  document.getElementById("f-article-ar").value = a.article_ar || "";
+  document.getElementById("f-article-en").value = a.article_en || "";
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -227,6 +240,8 @@ function submitForm(e) {
     name_en: document.getElementById("f-name-en").value.trim(),
     desc_ar: document.getElementById("f-desc-ar").value.trim(),
     desc_en: document.getElementById("f-desc-en").value.trim(),
+    article_ar: document.getElementById("f-article-ar").value.trim(),
+    article_en: document.getElementById("f-article-en").value.trim(),
   };
 
   if (id) {
