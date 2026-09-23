@@ -2510,5 +2510,95 @@ const APPS = [
     "name_en": "Arena (LMArena)",
     "desc_ar": "منصة لمقارنة نماذج الذكاء الاصطناعي المختلفة جنبًا إلى جنب والتصويت على الأفضل.",
     "desc_en": "Platform for comparing different AI models side-by-side and voting on the best."
+  },
+  {
+    "id": "marketing-new4-linkaty",
+    "category": "marketing",
+    "url": "https://linkaty.ai/",
+    "domain": "linkaty.ai",
+    "name_ar": "Linkaty",
+    "name_en": "Linkaty",
+    "desc_ar": "صفحة ذكية توحّد كل روابطك (سوشيال ميديا، منتجات، عروض) برابط واحد مع تحليلات أداء.",
+    "desc_en": "A smart page that consolidates all your links (social, products, offers) into one, with performance analytics."
+  },
+  {
+    "id": "ai-new4-urltovideoai",
+    "category": "ai",
+    "url": "https://urltovideo.ai/",
+    "domain": "urltovideo.ai",
+    "name_ar": "URL to Video AI",
+    "name_en": "URL to Video AI",
+    "desc_ar": "يحوّل أي رابط (مقال، صفحة منتج) إلى فيديو تسويقي جاهز للنشر تلقائيًا بالذكاء الاصطناعي.",
+    "desc_en": "Automatically turns any URL (article, product page) into a ready-to-publish marketing video."
+  },
+  {
+    "id": "ai-new4-deepai",
+    "category": "ai",
+    "url": "https://deepai.org/",
+    "domain": "deepai.org",
+    "name_ar": "DeepAI",
+    "name_en": "DeepAI",
+    "desc_ar": "مجموعة أدوات ذكاء اصطناعي متنوعة لتوليد الصور والنصوص ومعالجتها.",
+    "desc_en": "A varied collection of AI tools for generating and processing images and text."
+  },
+  {
+    "id": "ai-new4-blackforestlabs",
+    "category": "ai",
+    "url": "https://bfl.ai/",
+    "domain": "bfl.ai",
+    "name_ar": "Black Forest Labs",
+    "name_en": "Black Forest Labs",
+    "desc_ar": "الشركة المطوّرة لنماذج FLUX لتوليد الصور بالذكاء الاصطناعي بجودة عالية.",
+    "desc_en": "The company behind the FLUX AI image generation models, known for high image quality."
+  },
+  {
+    "id": "design-new4-shotdeck",
+    "category": "design",
+    "url": "https://shotdeck.com/",
+    "domain": "shotdeck.com",
+    "name_ar": "ShotDeck",
+    "name_en": "ShotDeck",
+    "desc_ar": "أكبر مكتبة صور مرجعية من الأفلام للمخرجين ومديري التصوير لبناء مراجع بصرية لمشاريعهم.",
+    "desc_en": "The largest searchable library of film stills for directors and cinematographers to build visual references."
+  },
+  {
+    "id": "ai-new4-edimakor",
+    "category": "ai",
+    "url": "https://www.edimakor.net/",
+    "domain": "www.edimakor.net",
+    "name_ar": "Edimakor",
+    "name_en": "Edimakor",
+    "desc_ar": "محرر فيديو مزوّد بأدوات ذكاء اصطناعي (ترجمة، دبلجة، افتار) لصنّاع المحتوى.",
+    "desc_en": "Video editor with built-in AI tools (translation, dubbing, avatars) for content creators."
+  },
+  {
+    "id": "tools-new4-ciechanowskisinteractiveexplainers",
+    "category": "tools",
+    "url": "https://ciechanow.ski/",
+    "domain": "ciechanow.ski",
+    "name_ar": "Ciechanowski's Interactive Explainers",
+    "name_en": "Ciechanowski's Interactive Explainers",
+    "desc_ar": "موقع تعليمي (مش ذكاء اصطناعي) فيه مقالات تفاعلية رائعة تشرح كيف تعمل أشياء علمية وهندسية معقّدة بصريًا.",
+    "desc_en": "Not an AI tool — a science/engineering site with beautifully interactive articles explaining how complex things work."
+  },
+  {
+    "id": "design-new4-clo3d",
+    "category": "design",
+    "url": "https://www.clo3d.com/en/",
+    "domain": "www.clo3d.com",
+    "name_ar": "CLO3D",
+    "name_en": "CLO3D",
+    "desc_ar": "برنامج احترافي لتصميم الأزياء ثلاثي الأبعاد يستخدمه مصممو الأزياء لمحاكاة القماش والملابس.",
+    "desc_en": "Professional 3D fashion design software used by designers to simulate fabric and garments."
+  },
+  {
+    "id": "design-new4-renderforest",
+    "category": "design",
+    "url": "https://www.renderforest.com/",
+    "domain": "www.renderforest.com",
+    "name_ar": "Renderforest",
+    "name_en": "Renderforest",
+    "desc_ar": "منصة لإنشاء فيديوهات وشعارات ومواقع ومواد ترويجية جاهزة بمساعدة الذكاء الاصطناعي.",
+    "desc_en": "Platform for creating videos, logos, websites and promo materials with AI assistance."
   }
 ];
