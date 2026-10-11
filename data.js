@@ -4172,5 +4172,135 @@ const APPS = [
     "desc_en": "Hand-cut paper craft art style",
     "prompt_ar": "/papercraft [اكتب وصف صورتك هون]",
     "prompt_en": "/papercraft [describe your image here]"
+  },
+  {
+    "id": "audio-new6-voicestudio",
+    "category": "audio",
+    "url": "https://voicestudio.sh/",
+    "domain": "voicestudio.sh",
+    "name_ar": "VoiceStudio",
+    "name_en": "VoiceStudio",
+    "desc_ar": "منصة مفتوحة المصدر تعمل محليًا على جهازك لاستنساخ الأصوات والدبلجة وتحويل النص إلى كلام.",
+    "desc_en": "Open-source, local-first platform for voice cloning, dubbing and text-to-speech."
+  },
+  {
+    "id": "digital-products-new6-patreon",
+    "category": "digital-products",
+    "url": "https://www.patreon.com/",
+    "domain": "www.patreon.com",
+    "name_ar": "Patreon",
+    "name_en": "Patreon",
+    "desc_ar": "منصة للمبدعين لبيع اشتراكات شهرية ومحتوى حصري لجمهورهم.",
+    "desc_en": "Platform for creators to earn through memberships and exclusive content."
+  },
+  {
+    "id": "audio-new6-audiotool",
+    "category": "audio",
+    "url": "https://www.audiotool.com/",
+    "domain": "www.audiotool.com",
+    "name_ar": "Audiotool",
+    "name_en": "Audiotool",
+    "desc_ar": "استوديو إنتاج موسيقي مجاني يعمل من المتصفح مباشرة.",
+    "desc_en": "Free music production studio that runs right in your browser."
+  },
+  {
+    "id": "design-new6-coolors",
+    "category": "design",
+    "url": "https://coolors.co/",
+    "domain": "coolors.co",
+    "name_ar": "Coolors",
+    "name_en": "Coolors",
+    "desc_ar": "مولّد لوحات ألوان سريع لتصميماتك وعلامتك التجارية.",
+    "desc_en": "Fast color palette generator for designs and branding."
+  },
+  {
+    "id": "app-building-new6-rocket",
+    "category": "app-building",
+    "url": "https://www.rocket.new/",
+    "domain": "www.rocket.new",
+    "name_ar": "Rocket",
+    "name_en": "Rocket",
+    "desc_ar": "ابنِ تطبيقات جاهزة للإنتاج من وصف نصي بسيط.",
+    "desc_en": "Build production-ready apps from a plain text description."
+  },
+  {
+    "id": "ai-new6-autoae",
+    "category": "ai",
+    "url": "https://autoae.online/",
+    "domain": "autoae.online",
+    "name_ar": "AutoAE",
+    "name_en": "AutoAE",
+    "desc_ar": "أداة ذكاء اصطناعي لإنشاء فيديوهات موشن غرافيك وتحريك النصوص تلقائيًا.",
+    "desc_en": "AI tool for automatically creating motion graphics and animated text videos."
+  },
+  {
+    "id": "design-new6-figma",
+    "category": "design",
+    "url": "https://www.figma.com/",
+    "domain": "www.figma.com",
+    "name_ar": "Figma",
+    "name_en": "Figma",
+    "desc_ar": "تصميم واجهات وتجربة مستخدم متقدمة مع التعاون الفريقي.",
+    "desc_en": "Advanced UI/UX design with real-time team collaboration."
+  },
+  {
+    "id": "domains-new6-afternic",
+    "category": "domains",
+    "url": "https://www.afternic.com/sell-domains",
+    "domain": "www.afternic.com",
+    "name_ar": "Afternic",
+    "name_en": "Afternic",
+    "desc_ar": "سوق لبيع الدومينات وعرضها على شبكة واسعة من المسجّلين.",
+    "desc_en": "Marketplace for selling domain names across a wide registrar network."
+  },
+  {
+    "id": "marketing-new6-outlierkit",
+    "category": "marketing",
+    "url": "https://outlierkit.com/",
+    "domain": "outlierkit.com",
+    "name_ar": "OutlierKit",
+    "name_en": "OutlierKit",
+    "desc_ar": "أداة لأبحاث يوتيوب وإيجاد الأفكار والفيديوهات المتفوقة بنسب مشاهدة عالية.",
+    "desc_en": "YouTube research tool for finding outlier videos and winning ideas."
+  },
+  {
+    "id": "app-building-new6-blink",
+    "category": "app-building",
+    "url": "https://blink.new/ar",
+    "domain": "blink.new",
+    "name_ar": "Blink",
+    "name_en": "Blink",
+    "desc_ar": "منصة لبناء تطبيقات ومواقع بالذكاء الاصطناعي من وصف نصي.",
+    "desc_en": "AI platform for building apps and websites from a text prompt."
+  },
+  {
+    "id": "ai-new6-theresanaiforthat",
+    "category": "ai",
+    "url": "https://theresanaiforthat.com/",
+    "domain": "theresanaiforthat.com",
+    "name_ar": "There's An AI For That",
+    "name_en": "There's An AI For That",
+    "desc_ar": "أكبر دليل لأدوات الذكاء الاصطناعي مع بحث وتصنيفات لكل مهمة.",
+    "desc_en": "Large directory of AI tools with search and categories for every task."
+  },
+  {
+    "id": "images-new6-mixkit",
+    "category": "images",
+    "url": "https://mixkit.co/",
+    "domain": "mixkit.co",
+    "name_ar": "Mixkit",
+    "name_en": "Mixkit",
+    "desc_ar": "مكتبة مجانية لمقاطع الفيديو والموسيقى والمؤثرات الصوتية للمشاريع.",
+    "desc_en": "Free library of video clips, music and sound effects for your projects."
+  },
+  {
+    "id": "design-new6-davinciresolve",
+    "category": "design",
+    "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+    "domain": "www.blackmagicdesign.com",
+    "name_ar": "DaVinci Resolve",
+    "name_en": "DaVinci Resolve",
+    "desc_ar": "برنامج احترافي لمونتاج الفيديو وتصحيح الألوان والمؤثرات (يوجد نسخة مجانية).",
+    "desc_en": "Professional video editing, color grading and effects software (free version available)."
   }
 ];
