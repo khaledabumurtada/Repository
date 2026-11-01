@@ -4302,5 +4302,85 @@ const APPS = [
     "name_en": "DaVinci Resolve",
     "desc_ar": "برنامج احترافي لمونتاج الفيديو وتصحيح الألوان والمؤثرات (يوجد نسخة مجانية).",
     "desc_en": "Professional video editing, color grading and effects software (free version available)."
+  },
+  {
+    "id": "design-new7-antyum",
+    "category": "design",
+    "url": "https://antyum.com/",
+    "domain": "antyum.com",
+    "name_ar": "Antyum",
+    "name_en": "Antyum",
+    "desc_ar": "وكالة تصميم وتطوير مواقع ويب احترافية في بنما.",
+    "desc_en": "Professional web design and development agency based in Panama."
+  },
+  {
+    "id": "articles-new7-amwaly",
+    "category": "articles",
+    "url": "https://amwaly.com/",
+    "domain": "amwaly.com",
+    "name_ar": "أموالي (Amwaly)",
+    "name_en": "Amwaly",
+    "desc_ar": "منصة عربية للناشرين لكتابة المقالات وتحقيق دخل منها.",
+    "desc_en": "Arabic publishers platform for writing articles and earning from them."
+  },
+  {
+    "id": "ai-new7-cutmaestro",
+    "category": "ai",
+    "url": "https://cutmaestro.com/",
+    "domain": "cutmaestro.com",
+    "name_ar": "CutMaestro",
+    "name_en": "CutMaestro",
+    "desc_ar": "مخرج بالذكاء الاصطناعي يحرّر الفيديو ويضيف الترجمة ويقصّ المقاطع تلقائيًا.",
+    "desc_en": "AI director that edits, captions and clips your videos automatically."
+  },
+  {
+    "id": "prompts-new7-vflow",
+    "category": "prompts",
+    "url": "https://vflow.live/ar/",
+    "domain": "vflow.live",
+    "name_ar": "vflow",
+    "name_en": "vflow",
+    "desc_ar": "مكتبة تضم أكثر من 12 ألف برومبت فيديو بالذكاء الاصطناعي لنماذج مثل Seedance وKling وVeo.",
+    "desc_en": "Library of 12,000+ AI video prompts for models like Seedance, Kling and Veo."
+  },
+  {
+    "id": "ai-new7-krea",
+    "category": "ai",
+    "url": "https://www.krea.ai/",
+    "domain": "www.krea.ai",
+    "name_ar": "Krea",
+    "name_en": "Krea",
+    "desc_ar": "توليد وتحرير الصور والفيديو بالذكاء الاصطناعي بأدوات إبداعية متقدمة.",
+    "desc_en": "AI image and video generation and editing with advanced creative tools."
+  },
+  {
+    "id": "marketing-new7-beacons",
+    "category": "marketing",
+    "url": "https://beacons.ai/",
+    "domain": "beacons.ai",
+    "name_ar": "Beacons",
+    "name_en": "Beacons",
+    "desc_ar": "منصة للمبدعين لإنشاء صفحة روابط ومتجر وأدوات تسويق في مكان واحد.",
+    "desc_en": "Creator platform for a link-in-bio page, store and marketing tools in one place."
+  },
+  {
+    "id": "prompts-new7-seedance2prompts",
+    "category": "prompts",
+    "url": "https://seedance2prompts.com/",
+    "domain": "seedance2prompts.com",
+    "name_ar": "Seedance 2 Prompts",
+    "name_en": "Seedance 2 Prompts",
+    "desc_ar": "موقع يجمع برومبتات جاهزة لتوليد الفيديو بنموذج Seedance 2.",
+    "desc_en": "Site collecting ready-made prompts for video generation with Seedance 2."
+  },
+  {
+    "id": "prompts-new7-50chatgptshortcuts",
+    "category": "prompts",
+    "url": "https://50-chatgpt-shortcuts.nadr.ai/",
+    "domain": "50-chatgpt-shortcuts.nadr.ai",
+    "name_ar": "50 ChatGPT Shortcuts",
+    "name_en": "50 ChatGPT Shortcuts",
+    "desc_ar": "صفحة تجمع 50 اختصارًا وأمرًا سريعًا لاستخدام ChatGPT بكفاءة.",
+    "desc_en": "Page collecting 50 shortcuts and quick commands to use ChatGPT efficiently."
   }
 ];
